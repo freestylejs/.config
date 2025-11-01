@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "lint": "biome lint --write",
+        "format": "biome format --write",
+        "check": "biome check --write",
+        "reporter": "biome check --reporter=summary"
+    }
+}
