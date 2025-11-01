@@ -31,4 +31,6 @@ To use the shareable TypeScript configuration, create a `tsconfig.json` file in 
 }
 ```
 
-You can then customize the configuration to your needs.
+### `Git` Commit Convention
+
+[Check convention reference](./src/commit/rules.md).
