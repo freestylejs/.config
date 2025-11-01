@@ -1,31 +1,28 @@
 {
-  "name": "@freestylejs/config",
-  "version": "0.0.1",
-  "description": "Shareable configurations for Biome and TypeScript.",
-  "files": [
-    "src/"
-  ],
-  "exports": {
-    "./biome": "./src/biome/biome.json",
-    "./tsconfig": "./src/ts/tsconfig.json"
-  },
-  "keywords": [
-    "config",
-    "freestylejs",
-    "biome",
-    "typescript"
-  ],
-  "author": "freestyle",
-  "license": "MIT",
-  "scripts": {
-    "publish:npm": "pnpm publish --access public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/freestylejs/.config"
-  },
-  "peerDependencies": {
-    "@biomejs/biome": ">=2.0.0",
-    "typescript": ">=5.0.0"
-  }
+    "name": "@freestylejs/config",
+    "version": "0.0.1",
+    "description": "Shareable configurations for Biome and TypeScript.",
+    "files": ["src/"],
+    "exports": {
+        "./biome": "./src/biome/biome-config.json",
+        "./tsconfig": "./src/ts/tsconfig.json"
+    },
+    "keywords": ["config", "freestylejs", "biome", "typescript"],
+    "author": "freestyle",
+    "license": "MIT",
+    "scripts": {
+        "publish:npm": "pnpm publish --access public",
+        "lint": "biome lint --write",
+        "format": "biome format --write",
+        "check": "biome check --write",
+        "reporter": "biome check --reporter=summary"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/freestylejs/.config"
+    },
+    "peerDependencies": {
+        "@biomejs/biome": ">=2.0.0",
+        "typescript": ">=5.0.0"
+    }
 }
