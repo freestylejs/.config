@@ -11,11 +11,11 @@
     "author": "freestyle",
     "license": "MIT",
     "scripts": {
-        "publish:npm": "pnpm publish --access public",
         "lint": "biome lint --write",
         "format": "biome format --write",
         "check": "biome check --write",
-        "reporter": "biome check --reporter=summary"
+        "reporter": "biome check --reporter=summary",
+        "publish": "pnpm publish --access public"
     },
     "repository": {
         "type": "git",
