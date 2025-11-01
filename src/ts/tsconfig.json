@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es2021", // enable standard decorator build
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "moduleResolution": "Bundler",
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "noImplicitOverride": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "types": ["node"]
+  },
+  "include": ["packages/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
