@@ -8,7 +8,7 @@ This package provides shareable configurations for Biome and TypeScript for Free
 pnpm add -D @freestylejs/config
 ```
 
-## Usage
+## Pkg Usage
 
 ### `Biome`
 
@@ -31,6 +31,33 @@ To use the shareable TypeScript configuration, create a `tsconfig.json` file in 
 }
 ```
 
+## Template Usage
+
+### `VSCode` Settings
+
+To use the recommended VSCode settings for Biome, create a `vscode/settings.json` file in the root of your project and add the following configuration:
+
+[See settings.json](./src/vscode/settings.json).
+
+### `Scripts` Configuration
+
+To use the recommended scripts for Biome, create a `scripts/scripts.json` file in the root of your project and add the following configuration:
+
+[See scripts.json](./src/scripts/scripts.json).
+
 ### `Git` Commit Convention
 
 [Check convention reference](./src/commit/rules.md).
+
+### `Git` Ignore Configuration
+
+[Check ignore reference](./src/gitignore/gitignore.md).
+
+### `NPM` Package Configuration
+
+[Check package reference](./src/package/package.md).
+
+### `CI` Configuration
+
+[Check CI reference](./src/ci/ci.md).
+
