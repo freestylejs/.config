@@ -1,8 +1,31 @@
 {
     "scripts": {
+        "dev": "turbo run build && turbo run dev",
+        "build": "pnpm reset:dist && turbo run build --no-cache --force",
+        "start": "turbo run start",
+
+        "test": "vitest",
+        "test:watch": "vitest --watch -u",
+        "test:coverage": "vitest run --coverage",
+        "test:ci": "pnpm build && pnpm prettier && pnpm test:coverage",
+
+        "ts:typecheck": "tsc --noEmit --allowImportingTsExtensions --skipLibCheck --jsx react-jsx",
+        "ts:performance": "rimraf ts-perf && tsc --noEmit --generateTrace ts-perf",
+
         "lint": "biome lint --write",
         "format": "biome format --write",
         "check": "biome check --write",
-        "reporter": "biome check --reporter=summary"
+        "reporter": "biome check --reporter=summary",
+
+        "reset:turbo": "turbo run clean",
+        "reset:dist": "pnpm -r --parallel exec rimraf dist",
+        "reset:modules": "pnpm -r --parallel exec rimraf node_modules && rimraf node_modules",
+        "reset": "pnpm reset:turbo && pnpm reset:modules",
+
+        "pkg:init": "pnpm test:ci && changeset",
+        "pkg:version": "changeset version",
+        "pkg:publish": "changeset publish",
+
+        "pre-commit": "pnpm format && pnpm lint"
     }
 }
