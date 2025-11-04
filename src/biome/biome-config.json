@@ -90,6 +90,22 @@
                                 "selector": {
                                     "kind": "class"
                                 }
+                            },
+                            {
+                                "formats": [
+                                    "camelCase",
+                                    "CONSTANT_CASE",
+                                    "PascalCase"
+                                ],
+                                "selector": {
+                                    "kind": "variable"
+                                }
+                            },
+                            {
+                                "formats": ["PascalCase"],
+                                "selector": {
+                                    "kind": "interface"
+                                }
                             }
                         ]
                     }
