@@ -1,12 +1,17 @@
 {
     "name": "@freestylejs/config",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "description": "Core configurations for freestyle codebase.",
     "exports": {
         "./biome": "./src/biome/biome-config.json",
         "./tsconfig": "./src/ts/tsconfig.json"
     },
-    "keywords": ["config", "freestylejs", "biome", "typescript"],
+    "keywords": [
+        "config",
+        "freestylejs",
+        "biome",
+        "typescript"
+    ],
     "author": "freestyle",
     "license": "MIT",
     "scripts": {
