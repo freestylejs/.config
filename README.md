@@ -16,7 +16,7 @@ To use the shareable Biome configuration, create a `biome.json` file in the root
 
 ```json
 {
-  "extends": ["@freestylejs/config/biome"]
+    "extends": ["@freestylejs/config/biome"]
 }
 ```
 
@@ -26,8 +26,8 @@ To use the shareable TypeScript configuration, create a `tsconfig.json` file in 
 
 ```json
 {
-  "extends": "@freestylejs/config/tsconfig",
-  "include": ["src"]
+    "extends": "@freestylejs/config/tsconfig",
+    "include": ["src"]
 }
 ```
 
@@ -61,3 +61,16 @@ To use the recommended scripts for Biome, create a `scripts/scripts.json` file i
 
 [Check CI reference](./src/ci/ci.md).
 
+## Versioning
+
+1. Commit all files
+
+2. Update pkg version using
+
+- patch: `pnpm version patch`
+- minor: `pnpm version minor`
+- major: `pnpm version major`
+
+3. Publish via `pnpm publish`
+
+4. Done.
