@@ -86,7 +86,10 @@
                     "options": {
                         "conventions": [
                             {
-                                "formats": ["PascalCase"]
+                                "formats": ["PascalCase"],
+                                "selector": {
+                                    "kind": "class"
+                                }
                             }
                         ]
                     }
