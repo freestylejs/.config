@@ -1,7 +1,7 @@
 {
     "name": "@freestylejs/config",
-    "version": "1.0.0",
-    "description": "Shareable configurations for Biome and TypeScript.",
+    "version": "1.0.1",
+    "description": "Core configurations for freestyle codebase.",
     "files": ["src/"],
     "exports": {
         "./biome": "./src/biome/biome-config.json",
