@@ -1,1 +1,6 @@
-.turbo
+src/ci
+src/commit
+src/git
+src/npm
+src/scripts
+src/vscode
