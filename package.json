@@ -6,12 +6,7 @@
         "./biome": "./src/biome/biome-config.json",
         "./tsconfig": "./src/ts/tsconfig.json"
     },
-    "keywords": [
-        "config",
-        "freestylejs",
-        "biome",
-        "typescript"
-    ],
+    "keywords": ["config", "freestylejs", "biome", "typescript"],
     "author": "freestyle",
     "license": "MIT",
     "scripts": {
