@@ -2,7 +2,6 @@
     "name": "@freestylejs/config",
     "version": "1.0.2",
     "description": "Core configurations for freestyle codebase.",
-    "files": ["src/"],
     "exports": {
         "./biome": "./src/biome/biome-config.json",
         "./tsconfig": "./src/ts/tsconfig.json"
@@ -15,7 +14,7 @@
         "format": "biome format --write",
         "check": "biome check --write",
         "reporter": "biome check --reporter=summary",
-        "publish": "pnpm publish --access public"
+        "publish": "pnpm publish --access public && git push && git push --tags"
     },
     "repository": {
         "type": "git",
