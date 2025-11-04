@@ -102,6 +102,7 @@
                 },
                 "noSubstr": "on",
                 "noDefaultExport": "on",
+                "noRestrictedGlobals": "warn",
                 "useThrowOnlyError": "on",
                 "noNegationElse": "info",
                 "noMagicNumbers": "warn",
