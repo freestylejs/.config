@@ -13,7 +13,14 @@
         "bracketSpacing": true,
         "expand": "auto",
         "useEditorconfig": true,
-        "includes": ["**", "!./node_modules/*", "!**/pnpm-lock.yaml"]
+        "includes": [
+            "**",
+            "!**/dist/**",
+            "!**/node_modules/**",
+            "!**/build/**",
+            "!**/coverage/**",
+            "!vitest.config.ts"
+        ]
     },
 
     "linter": {
@@ -27,6 +34,9 @@
         ],
         "rules": {
             "recommended": false,
+            "nursery": {
+                "useSortedClasses": "on"
+            },
             "complexity": {
                 "noAdjacentSpacesInRegex": "error",
                 "noExtraBooleanCast": "error",
@@ -82,7 +92,7 @@
                 },
                 "useNamingConvention": {
                     "level": "on",
-                    "fix": "safe",
+                    "fix": "none",
                     "options": {
                         "conventions": [
                             {
@@ -117,12 +127,13 @@
                     }
                 },
                 "noSubstr": "on",
-                "noDefaultExport": "on",
+                "noDefaultExport": "off",
                 "noRestrictedGlobals": "warn",
-                "useThrowOnlyError": "on",
                 "noNegationElse": "info",
                 "noMagicNumbers": "warn",
                 "noImplicitBoolean": "warn",
+                "useForOf": "info",
+                "useThrowOnlyError": "on",
                 "useDefaultSwitchClause": "warn",
                 "useDeprecatedReason": "error"
             },
@@ -280,6 +291,19 @@
         "formatter": {
             "indentScriptAndStyle": false,
             "selfCloseVoidElements": "always"
+        }
+    },
+
+    "css": {
+        "parser": {
+            "tailwindDirectives": true,
+            "cssModules": true
+        },
+        "assist": {
+            "enabled": true
+        },
+        "linter": {
+            "enabled": true
         }
     },
 
