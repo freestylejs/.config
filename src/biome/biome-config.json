@@ -19,7 +19,16 @@
             "!**/node_modules/**",
             "!**/build/**",
             "!**/coverage/**",
-            "!vitest.config.ts"
+            "!**/.turbo/**",
+            "!**/.obsidian/**",
+            "!**/.benchmark/**",
+            "!**/.store/**",
+            "!**/.astro/**",
+            "!**/.next/**",
+            "!**/.vite/**",
+            "!**/coverage",
+            "!**/__snapshots__/**",
+            "!**/vitest.config.ts"
         ]
     },
 
@@ -30,7 +39,16 @@
             "!**/node_modules/**",
             "!**/build/**",
             "!**/coverage/**",
-            "!vitest.config.ts"
+            "!**/.turbo/**",
+            "!**/.obsidian/**",
+            "!**/.benchmark/**",
+            "!**/.store/**",
+            "!**/.astro/**",
+            "!**/.next/**",
+            "!**/.vite/**",
+            "!**/coverage",
+            "!**/__snapshots__/**",
+            "!**/vitest.config.ts"
         ],
         "rules": {
             "recommended": false,
