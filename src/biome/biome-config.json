@@ -1,6 +1,21 @@
 {
     "$schema": "https://biomejs.dev/schemas/latest/schema.json",
 
+    "files": {
+        "ignoreUnknown": true,
+        "includes": [
+            "**",
+            "!**/dist",
+            "!**/build",
+            "!**/coverage",
+            "!**/node_modules",
+            "!**/__snapshots__",
+            "!**/.*/**",
+            "!**/*.d.ts",
+            "!**/*.config.*"
+        ]
+    },
+
     "formatter": {
         "enabled": true,
         "formatWithErrors": false,
@@ -12,44 +27,10 @@
         "bracketSameLine": false,
         "bracketSpacing": true,
         "expand": "auto",
-        "useEditorconfig": true,
-        "includes": [
-            "**",
-            "!**/dist/**",
-            "!**/node_modules/**",
-            "!**/build/**",
-            "!**/coverage/**",
-            "!**/.turbo/**",
-            "!**/.obsidian/**",
-            "!**/.benchmark/**",
-            "!**/.store/**",
-            "!**/.astro/**",
-            "!**/.next/**",
-            "!**/.vite/**",
-            "!**/coverage",
-            "!**/__snapshots__/**",
-            "!**/vitest.config.ts"
-        ]
+        "useEditorconfig": true
     },
 
     "linter": {
-        "includes": [
-            "**",
-            "!**/dist/**",
-            "!**/node_modules/**",
-            "!**/build/**",
-            "!**/coverage/**",
-            "!**/.turbo/**",
-            "!**/.obsidian/**",
-            "!**/.benchmark/**",
-            "!**/.store/**",
-            "!**/.astro/**",
-            "!**/.next/**",
-            "!**/.vite/**",
-            "!**/coverage",
-            "!**/__snapshots__/**",
-            "!**/vitest.config.ts"
-        ],
         "rules": {
             "recommended": false,
             "nursery": {
@@ -130,6 +111,12 @@
                                 }
                             },
                             {
+                                "formats": ["camelCase", "PascalCase"],
+                                "selector": {
+                                    "kind": "function"
+                                }
+                            },
+                            {
                                 "formats": ["PascalCase"],
                                 "selector": {
                                     "kind": "interface"
@@ -145,12 +132,13 @@
                     }
                 },
                 "noSubstr": "on",
-                "noDefaultExport": "off",
-                "noRestrictedGlobals": "warn",
-                "noNegationElse": "info",
-                "noMagicNumbers": "warn",
-                "noImplicitBoolean": "warn",
                 "useForOf": "info",
+                "useNodejsImportProtocol": "on",
+                "noDefaultExport": "info",
+                "noNegationElse": "info",
+                "noMagicNumbers": "info",
+                "noImplicitBoolean": "warn",
+                "noRestrictedGlobals": "warn",
                 "useThrowOnlyError": "on",
                 "useDefaultSwitchClause": "warn",
                 "useDeprecatedReason": "error"
