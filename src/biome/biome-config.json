@@ -148,7 +148,10 @@
                 "noCatchAssign": "error",
                 "noClassAssign": "error",
                 "noCompareNegZero": "error",
-                "noConsole": "warn",
+                "noConsole": {
+                    "fix": "none",
+                    "level": "warn"
+                },
                 "noConstantBinaryExpressions": "error",
                 "noControlCharactersInRegex": "error",
                 "noDebugger": "error",
