@@ -61,8 +61,19 @@
                 "noUnsafeFinally": "error",
                 "noUnsafeOptionalChaining": "error",
                 "noUnusedLabels": "error",
-                "noUnusedPrivateClassMembers": "error",
-                "noUnusedVariables": "error",
+                "noUnusedImports": {
+                    "fix": "safe",
+                    "level": "info"
+                },
+                "noUnusedPrivateClassMembers": {
+                    "fix": "none",
+                    "level": "info"
+                },
+                "noUnusedVariables": {
+                    "fix": "none",
+                    "level": "warn",
+                    "options": { "ignoreRestSiblings": true }
+                },
                 "useIsNan": "error",
                 "useValidForDirection": "error",
                 "useValidTypeof": "error",
