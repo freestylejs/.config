@@ -1,6 +1,6 @@
 {
     "name": "@freestylejs/config",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "Core configurations for freestyle codebase.",
     "exports": {
         "./biome": "./src/biome/biome-config.json",
