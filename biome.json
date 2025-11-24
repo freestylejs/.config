@@ -34,7 +34,10 @@
         "rules": {
             "recommended": false,
             "nursery": {
-                "useSortedClasses": "on"
+                "useSortedClasses": {
+                    "fix": "safe",
+                    "level": "info"
+                }
             },
             "complexity": {
                 "noAdjacentSpacesInRegex": "error",
