@@ -31,6 +31,39 @@ To use the shareable TypeScript configuration, create a `tsconfig.json` file in 
 }
 ```
 
+For TypeScript 7 (no `baseUrl`, relative `paths`), use:
+
+```json
+{
+    "extends": "@freestylejs/config/tsconfig-ts7",
+    "include": ["src"],
+    "compilerOptions": {
+        "paths": {
+            "~/*": ["./src/*"]
+        }
+    }
+}
+```
+
+### `Vite+`
+
+Shared defaults for Vite+ projects:
+
+```ts
+import { defineConfig } from 'vite-plus'
+import { fmt, lint, pack, test } from '@freestylejs/config/vite'
+
+export default defineConfig({
+    fmt,
+    lint,
+    pack,
+    test,
+})
+```
+
+The `./vite` export is additive; Biome and the existing TypeScript config remain
+available for projects that have not migrated yet.
+
 ## Template Usage
 
 ### `VSCode` Settings
