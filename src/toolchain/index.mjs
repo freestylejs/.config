@@ -8,12 +8,18 @@ export const toolchain = {
     typescript: '7.0.2',
     tsdown: '0.23.1',
     vitest: '5.0.5',
+    coverageV8: '5.0.5',
     vite: '8.3.4',
     oxlint: '1.88.0',
     oxfmt: '0.73.0',
     turbo: '2.6.0',
     changesets: '2.29.7',
     typesNode: '24.10.0',
+    attw: '0.18.5',
+    publint: '0.3.25',
+    husky: '9.1.7',
+    lintStaged: '16.2.6',
+    rimraf: '6.1.0',
 }
 
 export default toolchain
