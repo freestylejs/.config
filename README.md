@@ -45,24 +45,45 @@ For TypeScript 7 (no `baseUrl`, relative `paths`), use:
 }
 ```
 
-### `Vite+`
+### `Oxc` — Oxlint and Oxfmt
 
-Shared defaults for Vite+ projects:
+Shared Oxc defaults are exported as plain objects.
+
+`oxlint.config.ts`:
 
 ```ts
-import { defineConfig } from 'vite-plus'
-import { fmt, lint, pack, test } from '@freestylejs/config/vite'
+import { defineConfig } from 'oxlint'
+import { oxlintConfig } from '@freestylejs/config/oxlint'
 
-export default defineConfig({
-    fmt,
-    lint,
-    pack,
-    test,
-})
+export default defineConfig(oxlintConfig)
 ```
 
-The `./vite` export is additive; Biome and the existing TypeScript config remain
-available for projects that have not migrated yet.
+`oxfmt.config.ts`:
+
+```ts
+import { defineConfig } from 'oxfmt'
+import { oxfmtConfig } from '@freestylejs/config/oxfmt'
+
+export default defineConfig(oxfmtConfig)
+```
+
+Project-specific overrides belong in the consuming repository.
+
+### `Toolchain`
+
+The shared version manifest is available for templates and sync checks:
+
+```ts
+import { toolchain } from '@freestylejs/config/toolchain'
+
+console.log(toolchain.typescript)
+```
+
+### `Vite+` (legacy)
+
+The `./vite` and `./biome` exports remain available for repositories that have
+not migrated to the Oxc toolchain yet. They are not used by the current
+`.pkg` reference or generated templates.
 
 ## Template Usage
 
