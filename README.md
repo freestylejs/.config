@@ -74,10 +74,23 @@ Project-specific overrides belong in the consuming repository.
 The shared version manifest is available for templates and sync checks:
 
 ```ts
-import { toolchain } from '@freestylejs/config/toolchain'
+import { toolchain, toolchainPackages } from '@freestylejs/config/toolchain'
 
 console.log(toolchain.typescript)
+console.log(toolchainPackages.oxlint)
 ```
+
+The package also exposes one resolver for consumer repositories:
+
+```bash
+freestyle-sync-toolchain --check
+freestyle-sync-toolchain --write
+```
+
+It updates managed dependency versions, `packageManager`, `engines.node`,
+`engines.pnpm`, and `.nvmrc` from the manifest above.
+
+Use `--root <path>` to resolve a repository other than the current directory.
 
 ### `Vite+` (legacy)
 
