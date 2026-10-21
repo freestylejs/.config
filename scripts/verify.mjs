@@ -1,7 +1,11 @@
 import { readFileSync } from 'node:fs'
 import { oxfmtConfig } from '../src/oxc/oxfmt.mjs'
 import { oxlintConfig } from '../src/oxc/oxlint.mjs'
-import { toolchain } from '../src/toolchain/index.mjs'
+import {
+    toolchain,
+    toolchainPackages,
+    toolchainPlaceholders,
+} from '../src/toolchain/index.mjs'
 
 const pkg = JSON.parse(
     readFileSync(new URL('../package.json', import.meta.url), 'utf8')
@@ -23,6 +27,14 @@ if (!pkg.bin?.['freestyle-sync-toolchain']) {
 }
 if (!toolchain.ciNodes.length) {
     throw new Error('toolchain.ciNodes must not be empty')
+}
+if (toolchainPackages['@freestylejs/config'] !== pkg.version) {
+    throw new Error('toolchainPackages config version does not match package')
+}
+if (toolchainPlaceholders.__VERSION_CONFIG__ !== pkg.version) {
+    throw new Error(
+        'toolchain placeholder config version does not match package'
+    )
 }
 for (const entry of ['./oxlint', './oxfmt', './toolchain', './tsconfig-ts7']) {
     if (!pkg.exports[entry]) throw new Error(`missing export ${entry}`)
