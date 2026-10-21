@@ -24,12 +24,7 @@
             "default": "./src/viteplus/index.mjs"
         }
     },
-    "keywords": [
-        "config",
-        "freestylejs",
-        "biome",
-        "typescript"
-    ],
+    "keywords": ["config", "freestylejs", "biome", "typescript"],
     "author": "freestyle",
     "license": "MIT",
     "scripts": {
@@ -61,5 +56,6 @@
         "oxlint": {
             "optional": true
         }
-    }
+    },
+    "pnpm": {}
 }
