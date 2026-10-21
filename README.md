@@ -104,6 +104,8 @@ To use the recommended scripts for Biome, create a `scripts/scripts.json` file i
 - minor: `pnpm version minor`
 - major: `pnpm version major`
 
-3. Publish via `pnpm publish`
+3. Publish via `pnpm release`
 
-4. Done.
+4. Push commits and tags via `pnpm release:push`
+
+5. Done.

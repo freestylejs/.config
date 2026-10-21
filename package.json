@@ -25,7 +25,8 @@
         "format": "biome format --write",
         "check": "biome check --write",
         "reporter": "biome check --reporter=summary",
-        "publish": "pnpm publish --access public && git push && git push --tags"
+        "release": "pnpm publish --access public --no-git-checks",
+        "release:push": "git push && git push --tags"
     },
     "repository": {
         "type": "git",
