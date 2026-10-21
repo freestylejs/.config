@@ -5,12 +5,18 @@ export interface Toolchain {
     typescript: string
     tsdown: string
     vitest: string
+    coverageV8: string
     vite: string
     oxlint: string
     oxfmt: string
     turbo: string
     changesets: string
     typesNode: string
+    attw: string
+    publint: string
+    husky: string
+    lintStaged: string
+    rimraf: string
 }
 
 export const toolchain: Toolchain
