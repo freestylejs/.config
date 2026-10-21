@@ -1,12 +1,24 @@
 {
     "name": "@freestylejs/config",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "description": "Core configurations for freestyle codebase.",
     "files": ["src"],
     "exports": {
         "./biome": "./src/biome/biome-config.json",
         "./tsconfig": "./src/ts/tsconfig.json",
         "./tsconfig-ts7": "./src/ts/tsconfig.ts7.json",
+        "./oxlint": {
+            "types": "./src/oxc/oxlint.d.mts",
+            "default": "./src/oxc/oxlint.mjs"
+        },
+        "./oxfmt": {
+            "types": "./src/oxc/oxfmt.d.mts",
+            "default": "./src/oxc/oxfmt.mjs"
+        },
+        "./toolchain": {
+            "types": "./src/toolchain/index.d.mts",
+            "default": "./src/toolchain/index.mjs"
+        },
         "./vite": {
             "types": "./src/viteplus/index.d.mts",
             "default": "./src/viteplus/index.mjs"
@@ -25,6 +37,7 @@
         "format": "biome format --write",
         "check": "biome check --write",
         "reporter": "biome check --reporter=summary",
+        "verify": "node scripts/verify.mjs",
         "release": "pnpm publish --access public --no-git-checks",
         "release:push": "git push && git push --tags"
     },
@@ -34,6 +47,19 @@
     },
     "peerDependencies": {
         "@biomejs/biome": ">=2.0.0",
+        "oxfmt": ">=0.70.0",
+        "oxlint": ">=1.0.0",
         "typescript": ">=5.0.0"
+    },
+    "peerDependenciesMeta": {
+        "@biomejs/biome": {
+            "optional": true
+        },
+        "oxfmt": {
+            "optional": true
+        },
+        "oxlint": {
+            "optional": true
+        }
     }
 }
