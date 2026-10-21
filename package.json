@@ -1,8 +1,11 @@
 {
     "name": "@freestylejs/config",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "description": "Core configurations for freestyle codebase.",
     "files": ["src"],
+    "bin": {
+        "freestyle-sync-toolchain": "./src/toolchain/cli.mjs"
+    },
     "exports": {
         "./biome": "./src/biome/biome-config.json",
         "./tsconfig": "./src/ts/tsconfig.json",
@@ -24,12 +27,7 @@
             "default": "./src/viteplus/index.mjs"
         }
     },
-    "keywords": [
-        "config",
-        "freestylejs",
-        "biome",
-        "typescript"
-    ],
+    "keywords": ["config", "freestylejs", "biome", "typescript"],
     "author": "freestyle",
     "license": "MIT",
     "scripts": {
